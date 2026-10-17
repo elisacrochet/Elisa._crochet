@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff4f8">
+  <meta name="description" content="Scopri i peluche fatti a mano all'uncinetto di elisa._crochet.">
+  <title>elisa._crochet | Peluche handmade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="announcement">
+    ♡ Piccole creazioni, fatte con tanto amore ♡
+  </div>
+
+  <header class="header">
+    <a class="brand" href="#">
+      <span class="brand-icon">♡</span>
+      <span>elisa<span class="brand-dot">._</span>crochet</span>
+    </a>
+
+    <div class="header-actions">
+      <button class="icon-button" id="search-toggle" aria-label="Cerca">⌕</button>
+      <button class="cart-button" id="open-cart">
+        <span>♡</span> Carrello <span class="cart-count" id="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="search-bar hidden" id="search-bar">
+    <input id="search-input" type="search" placeholder="Cerca un peluche..." aria-label="Cerca un peluche">
+    <button id="close-search" aria-label="Chiudi ricerca">✕</button>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">HANDMADE WITH LOVE ♡</span>
+        <h1>Piccoli peluche,<br>grandi <span>emozioni.</span></h1>
+        <p>Ogni punto è fatto a mano, ogni creazione ha una sua dolcezza. Benvenuta nel mio piccolo mondo all'uncinetto.</p>
+        <a class="primary-button" href="#negozio">Scopri i peluche <span>→</span></a>
+        <div class="hero-note">
+          <span class="note-heart">♡</span>
+          <span>Fatto a mano con amore</span>
+          <span class="note-separator">·</span>
+          <span>Ogni pezzo è speciale</span>
+        </div>
+      </div>
+
+      <div class="hero-art" aria-label="Decorazioni rosa">
+        <div class="hero-circle"></div>
+        <span class="floating-heart heart-one">♡</span>
+        <span class="floating-heart heart-two">✿</span>
+        <div class="hero-sticker">
+          <span>made</span>
+          <strong>with love</strong>
+          <span>for you ♡</span>
+        </div>
+        <div class="hero-card">
+          <span class="hero-card-icon">🧸</span>
+          <span>La tua prossima<br>creazione preferita</span>
+          <span class="tiny-hearts">♡ ♡ ♡</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div><span>♡</span> Fatto a mano</div>
+      <div><span>✿</span> Ogni pezzo è unico</div>
+      <div><span>♡</span> Creato con cura</div>
+    </section>
+
+    <section class="shop-section" id="negozio">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">IL MIO PICCOLO MONDO</span>
+          <h2>I miei <span>peluche</span></h2>
+          <p>Trova il tuo nuovo compagno di coccole ♡</p>
+        </div>
+        <span class="product-total" id="product-total">Le mie creazioni</span>
+      </div>
+
+      <div class="shop-toolbar">
+        <div class="filter-pills">
+          <button class="filter-pill active" data-filter="all">Tutti i peluche</button>
+          <button class="filter-pill" data-filter="available">Disponibili</button>
+          <button class="filter-pill" data-filter="custom">Su richiesta</button>
+        </div>
+
+        <select id="sort-select" aria-label="Ordina i peluche">
+          <option value="featured">In evidenza</option>
+          <option value="price-asc">Prezzo crescente</option>
+          <option value="price-desc">Prezzo decrescente</option>
+          <option value="name">Nome A-Z</option>
+        </select>
+      </div>
+
+      <div class="product-grid" id="product-grid"></div>
+
+      <div class="empty-search hidden" id="empty-search">
+        <span>♡</span>
+        <h3>Nessun peluche trovato</h3>
+        <p>Prova con un'altra ricerca!</p>
+      </div>
+
+      <p class="setup-note">
+        ✿ Le nuove creazioni appariranno qui: ogni peluche avrà la sua foto e la sua storia.
+      </p>
+    </section>
+
+    <section class="about-section">
+      <div class="about-decoration">♡</div>
+      <div class="about-content">
+        <span class="eyebrow">UN FILO ALLA VOLTA</span>
+        <h2>Fatto a mano.<br><span>Fatto col cuore.</span></h2>
+        <p>Dietro ogni peluche ci sono tempo, pazienza e tantissimo amore. Ogni creazione nasce da un gomitolo e diventa qualcosa di speciale, pronta a trovare casa.</p>
+        <span class="signature">Con amore, Elisa ♡</span>
+      </div>
+    </section>
+
+    <section class="reviews-section" id="recensioni">
+      <div class="section-heading review-heading">
+        <div>
+          <span class="eyebrow">PAROLE DOLCI</span>
+          <h2>Le vostre <span>recensioni</span></h2>
+          <p>Hai acquistato un mio peluche? Raccontami la tua esperienza!</p>
+        </div>
+        <div class="rating-summary">
+          <span class="big-stars">★★★★★</span>
+          <span id="rating-summary-text">La tua opinione conta ♡</span>
+        </div>
+      </div>
+
+      <div class="reviews-layout">
+        <div class="review-list" id="review-list"></div>
+
+        <form class="review-form" id="review-form">
+          <h3>Lascia una recensione ♡</h3>
+          <p>Condividi la tua esperienza con la community.</p>
+
+          <label for="review-name">Il tuo nome</label>
+          <input id="review-name" name="name" maxlength="40" placeholder="Come ti chiami?" required>
+
+          <label>La tua valutazione</label>
+          <div class="star-picker" id="star-picker" role="group" aria-label="Seleziona le stelle">
+            <button type="button" data-rating="1" aria-label="1 stella">★</button>
+            <button type="button" data-rating="2" aria-label="2 stelle">★</button>
+            <button type="button" data-rating="3" aria-label="3 stelle">★</button>
+            <button type="button" data-rating="4" aria-label="4 stelle">★</button>
+            <button type="button" data-rating="5" aria-label="5 stelle">★</button>
+          </div>
+
+          <label for="review-message">La tua recensione</label>
+          <textarea id="review-message" name="message" maxlength="500" rows="4" placeholder="Com'è stata la tua esperienza?" required></textarea>
+
+          <button class="primary-button full-button" type="submit">Pubblica recensione ♡</button>
+          <small>Le recensioni inserite qui vengono salvate in questo browser.</small>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#">elisa<span class="brand-dot">._</span>crochet ♡</a>
+    <p>Piccoli peluche, fatti con tanto amore.</p>
+    <div class="footer-links">
+      <a href="#negozio">Peluche</a>
+      <a href="#recensioni">Recensioni</a>
+      <a href="#top" id="back-top">Torna su ↑</a>
+    </div>
+    <span class="copyright">© <span id="year"></span> elisa._crochet · Fatto a mano con ♡</span>
+  </footer>
+
+  <div class="overlay hidden" id="overlay"></div>
+
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Il tuo carrello" aria-hidden="true">
+    <div class="cart-header">
+      <div>
+        <span class="eyebrow">IL TUO PICCOLO TESORO</span>
+        <h2>Il carrello <span>♡</span></h2>
+      </div>
+      <button class="close-cart" id="close-cart" aria-label="Chiudi carrello">✕</button>
+    </div>
+
+    <div class="cart-items" id="cart-items"></div>
+
+    <div class="cart-empty" id="cart-empty">
+      <span>🧸</span>
+      <h3>È ancora vuoto!</h3>
+      <p>Il tuo prossimo peluche ti aspetta.</p>
+      <button class="primary-button" id="continue-shopping">Guarda i peluche</button>
+    </div>
+
+    <div class="cart-footer hidden" id="cart-footer">
+      <div class="subtotal"><span>Totale prodotti</span><strong id="cart-total">€ 0,00</strong></div>
+      <p>Spedizione da concordare con Elisa.</p>
+      <button class="primary-button full-button" id="checkout-button">Richiedi il tuo ordine ♡</button>
+      <small>Il pulsante prepara una richiesta d'ordine, non un pagamento.</small>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
