@@ -4,7 +4,7 @@ const products = [
   id: 1,
   name: "Pixie the peach bunny",
   price: 25,
-  image: "images/coniglio.jpg",
+  image: "coniglio.jpg",
   description: "Peluche fatto a mano all'uncinetto.",
   status: "available",
   badge: "Fatto a mano"
